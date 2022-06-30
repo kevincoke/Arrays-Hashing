@@ -1,11 +1,12 @@
+   
 class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
+    def isAnagram(self, s, t):
         if len(s) != len(t):
             return False
-        
-        dict1, dict2 = {}, {}
-        for item in s:
-            dict1[item] = dict1.get(item, 0)+1
-        for item in t:
-            dict2[item] = dict2.get(item, 0)+1
-        return dict1 == dict2
+            
+        d1, d2 = {}, {}
+        for i in s:
+            d1[i] = d1.get(i, 0)+1
+        for i in t:
+            d2[i] = d2.get(i, 0)+1
+        return d1 == d2
